@@ -19,22 +19,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tcd-su-OZf">
-                                <rect key="frame" x="30" y="762" width="333" height="56"/>
+                                <rect key="frame" x="30" y="693.66666666666663" width="333" height="124.33333333333337"/>
                                 <subviews>
-                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuR-aJ-RK7">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="46"/>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuR-aJ-RK7">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="52.333333333333336"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Name" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XuJ-Rq-4yH">
-                                                <rect key="frame" x="8" y="8" width="289.66666666666669" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Nc5-iZ-sFF"/>
-                                                </constraints>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTV-sh-Vbh">
+                                                <rect key="frame" x="16" y="11.999999999999998" width="279" height="28.333333333333329"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Label">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="14" name="Menlo-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaK-vE-bed">
-                                                <rect key="frame" x="305.66666666666669" y="8" width="19.333333333333314" height="22"/>
+                                                <rect key="frame" x="303" y="8" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kaK-vE-bed" secondAttribute="height" multiplier="1:1" id="7Xv-Vm-pMf"/>
+                                                    <constraint firstAttribute="width" constant="22" id="qb6-F6-0qn"/>
+                                                </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="xmark.square.fill" catalog="system"/>
@@ -45,16 +52,16 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstItem="kaK-vE-bed" firstAttribute="leading" secondItem="XuJ-Rq-4yH" secondAttribute="trailing" constant="8" id="Hbt-0r-Ivf"/>
-                                            <constraint firstItem="XuJ-Rq-4yH" firstAttribute="leading" secondItem="TuR-aJ-RK7" secondAttribute="leading" constant="8" id="RZj-yj-DWg"/>
+                                            <constraint firstItem="kaK-vE-bed" firstAttribute="leading" secondItem="OTV-sh-Vbh" secondAttribute="trailing" constant="8" id="Bvw-qM-EQf"/>
+                                            <constraint firstAttribute="bottom" secondItem="OTV-sh-Vbh" secondAttribute="bottom" constant="12" id="Stq-LK-a1b"/>
                                             <constraint firstItem="kaK-vE-bed" firstAttribute="top" secondItem="TuR-aJ-RK7" secondAttribute="top" constant="8" id="ev6-7Y-pXD"/>
-                                            <constraint firstAttribute="bottom" secondItem="XuJ-Rq-4yH" secondAttribute="bottom" constant="8" id="pxT-SR-Xic"/>
-                                            <constraint firstItem="XuJ-Rq-4yH" firstAttribute="top" secondItem="TuR-aJ-RK7" secondAttribute="top" constant="8" id="wdO-om-fN1"/>
+                                            <constraint firstItem="OTV-sh-Vbh" firstAttribute="leading" secondItem="TuR-aJ-RK7" secondAttribute="leading" constant="16" id="sqr-Z1-VNG"/>
+                                            <constraint firstItem="OTV-sh-Vbh" firstAttribute="top" secondItem="TuR-aJ-RK7" secondAttribute="top" constant="12" id="wIH-rR-YD5"/>
                                             <constraint firstAttribute="trailing" secondItem="kaK-vE-bed" secondAttribute="trailing" constant="8" id="yfn-MN-aYC"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvU-hQ-NHk">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="56"/>
+                                        <rect key="frame" x="0.0" y="68.333333333333371" width="333" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyt-1e-hTf">
                                                 <rect key="frame" x="0.0" y="0.0" width="333" height="56"/>
@@ -99,7 +106,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdY-iC-9Cj" customClass="ScrollableStackView" customModule="TQuizzer" customModuleProvider="target">
-                                <rect key="frame" x="22" y="210" width="349" height="528"/>
+                                <rect key="frame" x="22" y="210.00000000000003" width="349" height="459.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -124,7 +131,7 @@
                     <connections>
                         <outlet property="buttonContainerView" destination="SvU-hQ-NHk" id="gEG-xZ-J37"/>
                         <outlet property="errorContainerView" destination="TuR-aJ-RK7" id="PMn-ay-7WB"/>
-                        <outlet property="errorLabel" destination="XuJ-Rq-4yH" id="vXT-QZ-R8F"/>
+                        <outlet property="errorLabel" destination="OTV-sh-Vbh" id="BDd-xL-NMt"/>
                         <outlet property="imageView" destination="Tm7-0q-u1G" id="9mO-bI-ygt"/>
                         <outlet property="scrollableStackView" destination="wdY-iC-9Cj" id="d7f-sN-534"/>
                         <segue destination="oBF-Rt-f9o" kind="show" identifier="segueStartQuiz" id="P2h-bf-jgn"/>
@@ -160,7 +167,6 @@
                                         </state>
                                         <connections>
                                             <action selector="pressedNextButton:" destination="oBF-Rt-f9o" eventType="touchUpInside" id="miK-k2-52g"/>
-                                            <action selector="pressedStartButton:" destination="kcf-kE-S0L" eventType="touchUpInside" id="naw-hP-Ocx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -383,8 +389,6 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="pressedNextButton:" destination="oBF-Rt-f9o" eventType="touchUpInside" id="ewH-pg-mx9"/>
-                                            <action selector="pressedStartButton:" destination="kcf-kE-S0L" eventType="touchUpInside" id="ggk-lx-LSB"/>
                                             <segue destination="m6u-Rt-rws" kind="show" id="WGi-QQ-MSV"/>
                                         </connections>
                                     </button>
@@ -677,8 +681,6 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="pressedNextButton:" destination="oBF-Rt-f9o" eventType="touchUpInside" id="LNj-c3-8ZS"/>
-                                            <action selector="pressedStartButton:" destination="kcf-kE-S0L" eventType="touchUpInside" id="0lu-zs-Mu5"/>
                                             <segue destination="kcf-kE-S0L" kind="show" id="ntf-uR-utp"/>
                                         </connections>
                                     </button>

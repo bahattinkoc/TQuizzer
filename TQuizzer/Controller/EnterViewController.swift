@@ -14,7 +14,7 @@ final class EnterViewController: UIViewController {
 
     @IBOutlet private weak var buttonContainerView: UIView!
     @IBOutlet private weak var errorContainerView: UIView!
-    @IBOutlet private weak var errorLabel: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var scrollableStackView: ScrollableStackView!
 
@@ -165,6 +165,7 @@ final class EnterViewController: UIViewController {
         } else {
             errorContainerView.isHidden = isHidden
             errorLabel.text = text
+            errorContainerView.addShadow(with: 8.0)
             UIView.animate(withDuration: 0.3, animations: {
                 self.errorContainerView.alpha = 1.0
             })
@@ -187,7 +188,7 @@ final class EnterViewController: UIViewController {
             return
         }
         guard isQuestionsFetched else {
-            setErrorContainerView(text: "Please hold on momentarily as we prepare the questions for you.", isHidden: false)
+            setErrorContainerView(text: "Please wait as we prepare your questions.", isHidden: false)
             return
         }
         if isActive {
