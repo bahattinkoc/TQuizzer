@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabaseInternal
+import SafariServices
 
 final class EnterViewController: UIViewController {
 
@@ -17,6 +18,8 @@ final class EnterViewController: UIViewController {
     @IBOutlet private weak var errorLabel: UILabel!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var scrollableStackView: ScrollableStackView!
+    @IBOutlet private weak var privacyPolicyLabel: UILabel!
+    @IBOutlet private weak var termsOfConditionsLabel: UILabel!
 
     // MARK: - PROPERTIES
 
@@ -33,6 +36,7 @@ final class EnterViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         prepareFirebase()
+        preparePrivacyLabels()
         fetchQuestions()
         buttonContainerView.addShadow(with: 8.0)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -50,6 +54,11 @@ final class EnterViewController: UIViewController {
     }
 
     // MARK: - PRIVATE FUNCTIONS
+
+    private func preparePrivacyLabels() {
+        privacyPolicyLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pressedPrivacyPolicy)))
+        termsOfConditionsLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pressedTermsOfConditions)))
+    }
 
     private func prepareNameTextFieldView() {
         scrollableStackView.add(view: nameTextFieldContainerView)
@@ -176,6 +185,20 @@ final class EnterViewController: UIViewController {
 
     @objc private func hideKeyboard() {
         view.endEditing(true)
+    }
+
+    @objc private func pressedPrivacyPolicy() {
+        if let url = URL(string: "https://sites.google.com/view/tquizzer/privacy-policy") {
+            let safariViewController = SFSafariViewController(url: url)
+            present(safariViewController, animated: true, completion: nil)
+        }
+    }
+
+    @objc private func pressedTermsOfConditions() {
+        if let url = URL(string: "https://sites.google.com/view/tquizzer/terms-of-conditions") {
+            let safariViewController = SFSafariViewController(url: url)
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
 
     @IBAction private func pressedCloseErrorButton(_ sender: Any) {
